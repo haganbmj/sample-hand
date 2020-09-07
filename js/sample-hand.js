@@ -86,10 +86,10 @@ function readDecklist() {
     }
 }
 
-async function draw(n = 1) {
+function draw(n = 1) {
     while(n-- && library.length > 0) {
         let cardName = library.shift();
-        await addCardToHand(cardName);
+        addCardToHand(cardName);
     }
 }
 
