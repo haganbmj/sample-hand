@@ -19,7 +19,7 @@
 </head>
 
 <template id="card-template">
-    <div class="column col-3">
+    <div class="column col-3 col-sm-6">
         <div class="card-name">Card Name</div>
         <img class="card-image img-responsive" src="./img/card_back.jpg"/>
     </div>
@@ -31,7 +31,7 @@
             <a href="/" class="btn btn-link">Sample Hand Generator</a>
         </section>
         <!-- <section class="navbar-center"></section> -->
-        <section class="navbar-section">
+        <section class="navbar-section hide-sm">
             <a href="https://twitter.com/haganbmj" target="_blank" class="btn ml-1">Twitter</a>
             <a href="https://github.com/haganbmj/sample-hand" target="_blank" class="btn btn-primary ml-1">GitHub</a>
         </section>
@@ -39,7 +39,7 @@
 
     <div id="content" class="container">
         <div class="columns">
-            <div class="column col-3">
+            <div class="column col-3 col-sm-12">
                 <div class="form-group">
                     <label class="form-label" for="deck-input">Decklist</label>
                     <textarea id="deck-input" class="form-input" rows="20"
@@ -51,7 +51,7 @@
                     <button id="draw" class="btn" onclick="draw(1);">Draw One</button>
                 </div>
             </div>
-            <div class="column col-9">
+            <div class="column col-9 col-sm-12">
                 <div id="hand" class="columns"></div>
             </div>
         </div>
