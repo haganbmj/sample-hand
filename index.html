@@ -1,0 +1,63 @@
+<html lang="en-US">
+
+<head>
+    <title>Sample Hand Generator</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="haganbmj">
+    <meta name="description" content="Sample Hand Generator - Magic the Gathering">
+    <meta name="keywords" content="mtg,Magic,Magic the Gathering,Sample Hand,Playtest,Hand">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="twitter:title" content="MTG Sample Hand Generator">
+    <meta name="twitter:creator" content="@haganbmj">
+    <meta name="twitter:description" content="Sample Hand Generator - Magic the Gathering">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="stylesheet" type="text/css" href="./css/spectre.css">
+    <link rel="stylesheet" type="text/css" href="./css/sample-hand.css">
+</head>
+
+<template id="card-template">
+    <div class="column col-3">
+        <div class="card-name">Card Name</div>
+        <img class="card-image img-responsive" src="./img/card_back.jpg"/>
+    </div>
+</template>
+
+<body>
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="/" class="btn btn-link">Sample Hand Generator</a>
+        </section>
+        <!-- <section class="navbar-center"></section> -->
+        <section class="navbar-section">
+            <a href="https://twitter.com/haganbmj" target="_blank" class="btn ml-1">Twitter</a>
+            <a href="https://github.com/haganbmj/sample-hand" target="_blank" class="btn btn-primary ml-1">GitHub</a>
+        </section>
+    </header>
+
+    <div id="content" class="container">
+        <div class="columns">
+            <div class="column col-3">
+                <div class="form-group">
+                    <label class="form-label" for="deck-input">Decklist</label>
+                    <textarea id="deck-input" class="form-input" rows="20"
+                        placeholder="4 Wild Nacatl&#10;4 Steppe Lynx&#10;4x Lightning Bolt&#10;3x Price of Progress"></textarea>
+                </div>
+
+                <div class="btn-group btn-group-block">
+                    <button id="shuffle" class="btn btn-primary" onclick="shuffleAndDeal();">Shuffle & Deal</button>
+                    <button id="draw" class="btn" onclick="draw(1);">Draw One</button>
+                </div>
+            </div>
+            <div class="column col-9">
+                <div id="hand" class="columns"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="./js/sample-hand.js"></script>
+
+</html>
