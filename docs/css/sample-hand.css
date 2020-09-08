@@ -18,6 +18,11 @@ html.light {
     padding: .4rem;
 }
 
+.navbar-icon {
+    height: 36px;
+    width: auto;
+}
+
 #content {
     padding: .4rem;
     max-width: 1200px;
