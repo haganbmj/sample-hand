@@ -1,0 +1,44 @@
+html.light {
+    /* Primary spectre color scheme */
+    --primary-color: #5755d9;
+    --secondary-color: #f1f1fc;
+    --success-color: #32b643;
+    --warning-color: #ffb700;
+    --error-color: #e85600;
+    --dark-color: #303742;
+    --grey-dark-color: #66758c;
+    --grey-color: #bcc3ce;
+    --grey-light-color: #f7f8f9;
+    --light-color: #fff;
+
+    --primary-text-color: #3b4351;
+}
+
+.navbar {
+    padding: .4rem;
+}
+
+#content {
+    padding: .4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#hand > .column {
+    padding: 0;
+}
+
+img.card-image {
+    border-radius: 4.75% / 3.5%;
+}
+
+.card-header {
+    position: relative;
+    top: 12px;
+    height: 0;
+}
+
+.card-name {
+    color: white;
+    background: black;
+}
