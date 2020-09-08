@@ -53,6 +53,7 @@ async function addCardToHand(cardName) {
     let cardElementImage = cardElement.querySelector('.card-image');
 
     cardElementName.textContent = cardName;
+    cardElementName.dataset.tooltip = cardName;
     cardElementImage.alt = cardName;
     
     handElement.appendChild(cardElement);
@@ -60,6 +61,10 @@ async function addCardToHand(cardName) {
     const cardImage = await getCardImage(cardName);
     if (cardImage) {
         cardElementImage.src = cardImage;
+
+        if (cardImage !== './img/card_back.jpg') {
+            cardElementName.style.visibility = 'hidden';
+        }
     }
 }
 

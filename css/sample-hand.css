@@ -38,3 +38,14 @@ html {
 img.card-image {
     border-radius: 4.75% / 3.5%;
 }
+
+.card-header {
+    position: relative;
+    top: 12px;
+    height: 0;
+}
+
+.card-name {
+    color: white;
+    background: black;
+}

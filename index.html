@@ -20,7 +20,9 @@
 
 <template id="card-template">
     <div class="column col-3 col-sm-6">
-        <div class="card-name">Card Name</div>
+        <div class="card-header">
+            <div class="card-name text-ellipsis px-2">Card Name</div>
+        </div>
         <img class="card-image img-responsive" src="./img/card_back.jpg"/>
     </div>
 </template>
@@ -42,7 +44,7 @@
             <div class="column col-3 col-sm-12">
                 <div class="form-group">
                     <label class="form-label" for="deck-input">Decklist</label>
-                    <textarea id="deck-input" class="form-input" rows="20"
+                    <textarea id="deck-input" class="form-input" rows="20" autofocus
                         placeholder="4 Wild Nacatl&#10;4 Steppe Lynx&#10;4x Lightning Bolt&#10;3x Price of Progress"></textarea>
                 </div>
 
