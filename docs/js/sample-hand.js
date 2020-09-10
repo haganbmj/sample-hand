@@ -104,3 +104,15 @@ function shuffleAndDeal() {
     library = shuffle(deck);
     draw(7);
 }
+
+function keystrokeHandler(e) {
+    if (document.hasFocus() && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) {
+        if (e.key === 's') {
+            shuffleAndDeal();
+        } else if (e.key === 'd') {
+            draw(1);
+        }
+    }
+}
+
+document.addEventListener("keyup", keystrokeHandler);
