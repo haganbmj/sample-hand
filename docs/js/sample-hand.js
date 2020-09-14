@@ -40,7 +40,11 @@ async function getCardImage(cardName) {
             resolvedImages[lowerCardName] = './img/card_back.jpg';
         } else {
             let json = await response.json();
-            resolvedImages[lowerCardName] = json.image_uris.normal;
+            if (json.card_faces) {
+                resolvedImages[lowerCardName] = json.card_faces[0].image_uris.normal;
+            } else {
+                resolvedImages[lowerCardName] = json.image_uris.normal;   
+            }
         }
     }
 
