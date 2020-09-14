@@ -84,6 +84,10 @@ function readDecklist() {
     existingRawDecklist = JSON.stringify(rawDecklist);
 
     for (let line in rawDecklist) {
+        if (/^\/\/ Sideboard/i.test(rawDecklist[line])) {
+            return;
+        }
+
         let extract = /^(\d+)x? (.+)$/.exec(rawDecklist[line]);
         if (extract === null) {
             console.warn(`Failed to parse line ${line}: ${rawDecklist[line]}`);
