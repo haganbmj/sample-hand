@@ -1,7 +1,7 @@
 <html lang="en-US" class="light">
 
 <head>
-    <title>Sample Hand Generator - Magic the Gathering</title>
+    <title>Ban Griselbrand</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -11,35 +11,45 @@
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="author" content="haganbmj">
-    <meta name="description" content="Sample Hand Generator - Magic the Gathering">
-    <meta name="keywords" content="mtg,Magic,Magic the Gathering,Sample Hand,Playtest,Hand">
+    <meta name="description" content="Griselbrand - Why is this dumb card still legal?">
+    <meta name="keywords" content="mtg,Magic,Magic the Gathering,Griselbrand">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="twitter:title" content="MTG Sample Hand Generator">
+    <meta name="twitter:title" content="Griselbrand">
     <meta name="twitter:creator" content="@haganbmj">
-    <meta name="twitter:description" content="Sample Hand Generator - Magic the Gathering">
+    <meta name="twitter:description" content="Why is this dumb card still legal?">
     <meta name="twitter:card" content="summary">
 
     <link rel="stylesheet" type="text/css" href="./css/spectre.css">
-    <link rel="stylesheet" type="text/css" href="./css/sample-hand.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
 
-<template id="card-template">
-    <div class="column col-3 col-sm-6">
-        <div class="card-header">
-            <div class="card-name text-ellipsis px-2">Card Name</div>
-        </div>
-        <img class="card-image img-responsive" src="./img/card_back.jpg"/>
-    </div>
-</template>
+    <style type="text/css">
+    body {
+        background-image: url('https://c1.scryfall.com/file/scryfall-cards/png/front/b/5/b51666ae-2aef-4cb1-9cd4-44aec81530f8.png');
+        background-repeat: repeat;
+        background-size: 10em auto;
+        background-position: center;
+    }
+
+    .call-to-action {
+        font-size: 5em;
+        text-align: center;
+        color: white;
+        font-family: 'Comic Sans MS';
+        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    }
+    </style>
+</head>
 
 <body>
     <header class="navbar bg-gray">
         <section class="navbar-section">
-            <a href="/"><img class="navbar-icon" src="./android-chrome-192x192.png"></a>
-            <a href="/" class="btn btn-link">Sample Hand Generator</a>
+            <!-- <a href="/"><img class="navbar-icon" src="./android-chrome-192x192.png"></a>
+            <a href="/" class="btn btn-link">Griselbrand</a> -->
+            <a href="./sample-hand" class="btn ml-1">Sample Hand Generator</a>
+            <a href="https://puzzlebox.griselbrand.com" class="btn ml-1">Teferi's Puzzle Box</a>
+            <a href="https://hextended.com" class="btn ml-1">Hyper Extended</a>
         </section>
-        <!-- <section class="navbar-center"></section> -->
         <section class="navbar-section hide-sm">
             <a href="https://twitter.com/haganbmj" target="_blank" class="btn ml-1">Twitter</a>
             <a href="https://github.com/haganbmj/sample-hand" target="_blank" class="btn btn-primary ml-1">GitHub</a>
@@ -48,6 +58,15 @@
 
     <div id="content" class="container">
         <div class="columns">
+            <div class="column col-12 col-sm-12">
+                <div class="call-to-action">Ban this stupid card</div>
+            </div>
+            <!-- <div class="column col-2 col-sm-12">
+                <div>Stuff</div>
+            </div> -->
+        </div>
+
+        <!-- <div class="columns">
             <div class="column col-3 col-sm-12">
                 <div class="form-group">
                     <label class="form-label" for="deck-input">Decklist</label>
@@ -63,10 +82,10 @@
             <div class="column col-9 col-sm-12">
                 <div id="hand" class="columns"></div>
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 
-<script type="text/javascript" src="./js/sample-hand.js"></script>
+<!-- <script type="text/javascript" src="./js/sample-hand.js"></script> -->
 
 </html>
