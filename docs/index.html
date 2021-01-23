@@ -33,6 +33,10 @@
         background-position: center;
     }
 
+    #content #call {
+        margin-bottom: 5rem;
+    }
+
     .call-to-action {
         font-size: 5em;
         text-align: center;
@@ -40,17 +44,47 @@
         font-family: 'Comic Sans MS';
         text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     }
+
+    #pages .column {
+        padding: 0.4rem;
+    }
+
+    #pages .card {
+        border: 0;
+        box-shadow: 0 0.25rem 1rem rgba(48,55,66,.15);
+        height: 100%;
+        min-height: 8rem;
+        font-family: 'Comic Sans MS';
+    }
+
+    #pages .column a {
+        text-decoration: none;
+    }
+
+    #pages .column .card-body {
+        color: var(--primary-text-color);
+    }
+
+    #content .columns {
+        margin: 0 auto;
+    }
+
+    .section-title {
+        /* color: white; */
+        /* background: var(--grey-light-color); */
+        opacity: 0;
+    }
     </style>
 </head>
 
 <body>
     <header class="navbar bg-gray">
         <section class="navbar-section">
-            <!-- <a href="/"><img class="navbar-icon" src="./android-chrome-192x192.png"></a>
-            <a href="/" class="btn btn-link">Griselbrand</a> -->
-            <a href="./sample-hand" class="btn ml-1">Sample Hand Generator</a>
+            <a href="/"><img class="navbar-icon" src="./android-chrome-192x192.png"></a>
+            <a href="/" class="btn btn-link">Griselbrand</a>
+            <!-- <a href="./sample-hand" class="btn ml-1">Sample Hand Generator</a>
             <a href="https://puzzlebox.griselbrand.com" class="btn ml-1">Teferi's Puzzle Box</a>
-            <a href="https://hextended.com" class="btn ml-1">Hyper Extended</a>
+            <a href="https://hextended.com" class="btn ml-1">Hyper Extended</a> -->
         </section>
         <section class="navbar-section hide-sm">
             <a href="https://twitter.com/haganbmj" target="_blank" class="btn ml-1">Twitter</a>
@@ -59,35 +93,108 @@
     </header>
 
     <div id="content" class="container">
-        <div class="columns">
+        <div id="call" class="columns">
             <div class="column col-12 col-sm-12">
                 <div class="call-to-action">Ban this stupid card</div>
             </div>
-            <!-- <div class="column col-2 col-sm-12">
-                <div>Stuff</div>
-            </div> -->
         </div>
 
-        <!-- <div class="columns">
-            <div class="column col-3 col-sm-12">
-                <div class="form-group">
-                    <label class="form-label" for="deck-input">Decklist</label>
-                    <textarea id="deck-input" class="form-input" rows="20" autofocus
-                        placeholder="4 Wild Nacatl&#10;4 Steppe Lynx&#10;4x Lightning Bolt&#10;3x Price of Progress&#10;&#10;// Sideboard&#10;1 Orim's Chant&#10;3x Rough // Tumble"></textarea>
-                </div>
+        <div id="pages" class="columns">
+            <div id="formats" class="section-title s-rounded column col-12 h2">Formats</div>
+            <div class="column col-4 col-sm-12">
+                <a href="https://hextended.com">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <span class="card-title h5">Hyper Extended</span>
+                        </div>
+                        <div class="card-body">
+                            A constructed format composed of the black bordered sets from Fallen Empires to Scourge.
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-                <div class="btn-group btn-group-block">
-                    <button id="shuffle" class="btn btn-primary" onclick="shuffleAndDeal();"><u>S</u>huffle & Deal</button>
-                    <button id="draw" class="btn" onclick="draw(1);"><u>D</u>raw One</button>
-                </div>
+            <div class="column col-4 col-sm-12">
+                <a href="https://puzzlebox.griselbrand.com">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <span class="card-title h5">Teferi's Puzzlebox</span>
+                        </div>
+                        <div class="card-body">
+                            A build-your-own-standard constructed format for the middle-era sets.
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="column col-9 col-sm-12">
-                <div id="hand" class="columns"></div>
+
+            <div class="column col-4 col-sm-12">
+                <a href="http://606.griselbrand.com">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <span class="card-title h5">Lost Legacy, 606</span>
+                        </div>
+                        <div class="card-body">
+                            A constructed format to emulate Legacy as it was in June 2006, prior to the release of Coldsnap.
+                        </div>
+                    </div>
+                </a>
             </div>
-        </div> -->
+
+            <div class="column col-4 col-sm-12">
+                <a href="./img/hacks125.png">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <span class="card-title h5">Hacks 1.25</span>
+                        </div>
+                        <div class="card-body">
+                            Gushbond.format
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div id="tools" class="section-title s-rounded column col-12 h2">Tools</div>
+            <div class="column col-4 col-sm-12">
+                <a href="https://proxy.griselbrand.com">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <span class="card-title h5">Proxy Printer</span>
+                        </div>
+                        <div class="card-body">
+                            Print playtest proxies.
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="column col-4 col-sm-12">
+                <a href="./sample-hand">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <span class="card-title h5">Sample Hand</span>
+                        </div>
+                        <div class="card-body">
+                            Generate decklist sample hands.
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div id="misc" class="section-title s-rounded column col-12 h2">Miscellaneous</div>
+            <div class="column col-4 col-sm-12">
+                <a href="http://hacksmtg.com">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <span class="card-title h5">Hacks MTG Blog</span>
+                        </div>
+                        <div class="card-body">
+                            A bunch of degenerates.
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 </body>
-
-<!-- <script type="text/javascript" src="./js/sample-hand.js"></script> -->
 
 </html>
