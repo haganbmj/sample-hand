@@ -21,6 +21,7 @@
     <meta name="twitter:card" content="summary">
 
     <link rel="stylesheet" type="text/css" href="../css/spectre.css">
+    <link rel="stylesheet" type="text/css" href="../css/scryfall.css">
     <!-- <link rel="stylesheet" type="text/css" href="../css/index.css"> -->
 
     <style type="text/css">
@@ -64,6 +65,34 @@
         border-radius: 4.75% / 3.5%;
         max-width: 300px;
     }
+
+    #points {
+        display: table;
+    }
+
+    #points > a {
+        display: table-row;
+    }
+
+    #points > a.header > div {
+        border-bottom-width: 0.1rem;
+        font-weight: bold;
+    }
+
+    #points > a:hover {
+        background: #eef0f3;
+    }
+
+    #points > a:hover, #points > a:focus, #points > a:active, #points > a:visited {
+        color: unset;
+        text-decoration: unset;
+    }
+
+    #points > a > div {
+        display: table-cell;
+        border-bottom: 0.05rem solid #dadee4;
+        padding: 0.6rem 0.4rem;
+    }
     </style>
 </head>
 
@@ -95,95 +124,85 @@
                 <li><b>Tutorin'</b>: These cards search for other stupid cards. In a format of only Goblin Pikers tutors would be worthless, but alas not the case. Universally Demonic Tutor is seen as the gold standard, with Vampiric, Mystical, Imperial Seal and others following down the line. Cards like Tinker, Oath of Druids, Survival of the Fittest and Entomb are effectively tutors as well.</li>
             </ul>
 
-            <table id="points" class="table table-striped table-hover">
-                <tr class="header"><th>Points</th><th>Card Name</th><th>Justification</th></tr>
-                <tr><td class="pointing">1</td><td>Ancient Tomb</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">1</td><td>Birthing Pod</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">1</td><td>Brainstorm</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Dark Depths</td><td>Comboin'</td></tr>
-                <tr><td class="pointing">1</td><td>Dark Petition</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">1</td><td>Dark Ritual</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">1</td><td>Deathrite Shaman</td><td>Borin’</td></tr>
-                <tr><td class="pointing">1</td><td>Demonic Consultation</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">1</td><td>Entomb</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">1</td><td>Fastbond</td><td>Borin’</td></tr>
-                <tr><td class="pointing">1</td><td>Force of Will</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Gifts Ungiven</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">1</td><td>Griselbrand</td><td>Borin’</td></tr>
-                <tr><td class="pointing">1</td><td>Gush</td><td>Drawin'</td></tr>
-                <tr><td class="pointing">1</td><td>Jace, the Mind Sculptor</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Karakas</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Karn, the Great Creator</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Mental Misstep</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Narset, Parter of Veils</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Opposition Agent</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Personal Tutor</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">1</td><td>Ponder</td><td>Borin’</td></tr>
-                <tr><td class="pointing">1</td><td>Spellseeker</td><td>Borin’</td></tr>
-                <tr><td class="pointing">1</td><td>Stoneforge Mystic</td><td>Borin’</td></tr>
-                <tr><td class="pointing">1</td><td>Sylvan Library</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Teferi, Time Raveler</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Thoughtseize</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Transmute Artifact</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">1</td><td>Umezawa’s Jitte</td><td>Borin’</td></tr>
-                <tr><td class="pointing">1</td><td>Uro, Titan of Nature’s Wrath</td><td>Borin'</td></tr>
-                <tr><td class="pointing">1</td><td>Yawgmoth’s Bargain</td><td>Drawin'</td></tr>
-                <tr><td class="pointing">2</td><td>Balance</td><td>Borin'</td></tr>
-                <tr><td class="pointing">2</td><td>Crop Rotation</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Doomsday</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Enlightened Tutor</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Green Sun’s Zenith</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Intuition</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Library of Alexandria</td><td>Drawin'</td></tr>
-                <tr><td class="pointing">2</td><td>Life from the Loam</td><td>Borin’</td></tr>
-                <tr><td class="pointing">2</td><td>Lim-Dul’s Vault</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Lutri, the Spellchaser</td><td>Borin’</td></tr>
-                <tr><td class="pointing">2</td><td>Mana Drain</td><td>Borin'</td></tr>
-                <tr><td class="pointing">2</td><td>Mana Vault</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">2</td><td>Mind Twist</td><td>Borin'</td></tr>
-                <tr><td class="pointing">2</td><td>Mishra’s Workshop</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">2</td><td>Mystic Sanctuary</td><td>Borin'</td></tr>
-                <tr><td class="pointing">2</td><td>Mystical Tutor</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Natural Order</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Oath of Druids</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Oko, Thief of Crowns</td><td>Borin’</td></tr>
-                <tr><td class="pointing">2</td><td>Protean Hulk</td><td>Comboin'</td></tr>
-                <tr><td class="pointing">2</td><td>Sensei’s Divining Top</td><td>Borin’</td></tr>
-                <tr><td class="pointing">2</td><td>Skullclamp</td><td>Borin’</td></tr>
-                <tr><td class="pointing">2</td><td>Snapcaster Mage</td><td>Borin'</td></tr>
-                <tr><td class="pointing">2</td><td>Survival of the Fittest</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Tainted Pact</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Timetwister</td><td>Drawin'</td></tr>
-                <tr><td class="pointing">2</td><td>Tolarian Academy</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">2</td><td>True-name Nemesis</td><td>Borin'</td></tr>
-                <tr><td class="pointing">2</td><td>Underworld Breach</td><td>Comboin'</td></tr>
-                <tr><td class="pointing">2</td><td>Wasteland</td><td>Borin'</td></tr>
-                <tr><td class="pointing">2</td><td>Wishclaw Talisman</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">2</td><td>Wrenn and Six</td><td>Borin'</td></tr>
-                <tr><td class="pointing">2</td><td>Yawgmoth’s Will</td><td>Drawin'</td></tr>
-                <tr><td class="pointing">3</td><td>Channel</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">3</td><td>Dig Through Time</td><td>Drawin'</td></tr>
-                <tr><td class="pointing">3</td><td>Imperial Seal</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">3</td><td>Merchant Scroll</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">3</td><td>Strip Mine</td><td>Borin'</td></tr>
-                <tr><td class="pointing">4</td><td>Flash</td><td>Comboin'</td></tr>
-                <tr><td class="pointing">4</td><td>Mana Crypt</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">4</td><td>Sol Ring</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">4</td><td>Thassa’s Oracle</td><td>Comboin'</td></tr>
-                <tr><td class="pointing">4</td><td>Tinker</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">4</td><td>Treasure Cruise</td><td>Drawin'</td></tr>
-                <tr><td class="pointing">4</td><td>Vampiric Tutor</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">5</td><td>Demonic Tutor</td><td>Tutorin'</td></tr>
-                <tr><td class="pointing">5</td><td>Mox Emerald</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">5</td><td>Mox Jet</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">5</td><td>Mox Pearl</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">5</td><td>Mox Ruby</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">5</td><td>Mox Sapphire</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">6</td><td>Ancestral Recall</td><td>Drawin'</td></tr>
-                <tr><td class="pointing">6</td><td>Time Walk</td><td>Borin'</td></tr>
-                <tr><td class="pointing">7</td><td>Black Lotus</td><td>Rampin'</td></tr>
-                <tr><td class="pointing">7</td><td>Time Vault</td><td>Comboin'
-            </table>
+            <div id="points" class="table table-striped table-hover">
+                <a class="header"><div>Points</div><div>Name</div><div>Type</div><div>Justification</div></a>
+                <a href="https://scryfall.com/card/tmp/315/ancient-tomb" target="_blank"><div class="pointing">1</div><div>Ancient Tomb</div><div>Land</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/nph/104/birthing-pod" target="_blank"><div class="pointing">1</div><div>Birthing Pod</div><div>Artifact</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/ice/61/brainstorm" target="_blank"><div class="pointing">1</div><div>Brainstorm</div><div>Instant</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/csp/145/dark-depths" target="_blank"><div class="pointing">1</div><div>Dark Depths</div><div>Land</div><div>Comboin'</div></a>
+                <a href="https://scryfall.com/card/ori/90/dark-petition" target="_blank"><div class="pointing">1</div><div>Dark Petition</div><div>Sorcery</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/lea/98/dark-ritual" target="_blank"><div class="pointing">1</div><div>Dark Ritual</div><div>Instant</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/rtr/213/deathrite-shaman" target="_blank"><div class="pointing">1</div><div>Deathrite Shaman</div><div>Creature</div><div>Borin’</div></a>
+                <a href="https://scryfall.com/card/ice/121/demonic-consultation" target="_blank"><div class="pointing">1</div><div>Demonic Consultation</div><div>Instant</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/ody/132/entomb" target="_blank"><div class="pointing">1</div><div>Entomb</div><div>Instant</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/lea/192/fastbond" target="_blank"><div class="pointing">1</div><div>Fastbond</div><div>Enchantment</div><div>Borin’</div></a>
+                <a href="https://scryfall.com/card/all/28/force-of-will" target="_blank"><div class="pointing">1</div><div>Force of Will</div><div>Instant</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/chk/62/gifts-ungiven" target="_blank"><div class="pointing">1</div><div>Gifts Ungiven</div><div>Instant</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/avr/106/griselbrand" target="_blank"><div class="pointing">1</div><div>Griselbrand</div><div>Creature</div><div>Borin’</div></a>
+                <a href="https://scryfall.com/card/mmq/82/gush" target="_blank"><div class="pointing">1</div><div>Gush</div><div>Instant</div><div>Drawin'</div></a>
+                <a href="https://scryfall.com/card/wwk/31/jace-the-mind-sculptor" target="_blank"><div class="pointing">1</div><div>Jace, the Mind Sculptor</div><div>Apewalker</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/leg/303/karakas" target="_blank"><div class="pointing">1</div><div>Karakas</div><div>Land</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/war/1/karn-the-great-creator" target="_blank"><div class="pointing">1</div><div>Karn, the Great Creator</div><div>Apewalker</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/nph/38/mental-misstep" target="_blank"><div class="pointing">1</div><div>Mental Misstep</div><div>Instant</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/war/61/narset-parter-of-veils" target="_blank"><div class="pointing">1</div><div>Narset, Parter of Veils</div><div>Apewalker</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/cmr/141/opposition-agent" target="_blank"><div class="pointing">1</div><div>Opposition Agent</div><div>Creature</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/por/64/personal-tutor" target="_blank"><div class="pointing">1</div><div>Personal Tutor</div><div>Sorcery</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/lrw/79/ponder" target="_blank"><div class="pointing">1</div><div>Ponder</div><div>Sorcery</div><div>Borin’</div></a>
+                <a href="https://scryfall.com/card/bbd/41/spellseeker" target="_blank"><div class="pointing">1</div><div>Spellseeker</div><div>Creature</div><div>Borin’</div></a>
+                <a href="https://scryfall.com/card/wwk/20/stoneforge-mystic" target="_blank"><div class="pointing">1</div><div>Stoneforge Mystic</div><div>Creature</div><div>Borin’</div></a>
+                <a href="https://scryfall.com/card/leg/207/sylvan-library" target="_blank"><div class="pointing">1</div><div>Sylvan Library</div><div>Enchantment</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/war/221/teferi-time-raveler" target="_blank"><div class="pointing">1</div><div>Teferi, Time Raveler</div><div>Apewalker</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/lrw/145/thoughtseize" target="_blank"><div class="pointing">1</div><div>Thoughtseize</div><div>Sorcery</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/atq/14/transmute-artifact" target="_blank"><div class="pointing">1</div><div>Transmute Artifact</div><div>Sorcery</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/lea/3/balance" target="_blank"><div class="pointing">2</div><div>Balance</div><div>Sorcery</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/ulg/98/crop-rotation" target="_blank"><div class="pointing">2</div><div>Crop Rotation</div><div>Instant</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/wth/66/doomsday" target="_blank"><div class="pointing">2</div><div>Doomsday</div><div>Sorcery</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/mir/14/enlightened-tutor" target="_blank"><div class="pointing">2</div><div>Enlightened Tutor</div><div>Instant</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/tmp/70/intuition" target="_blank"><div class="pointing">2</div><div>Intuition</div><div>Instant</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/arn/76/library-of-alexandria" target="_blank"><div class="pointing">2</div><div>Library of Alexandria</div><div>Land</div><div>Drawin'</div></a>
+                <a href="https://scryfall.com/card/rav/172/life-from-the-loam" target="_blank"><div class="pointing">2</div><div>Life from the Loam</div><div>Sorcery</div><div>Borin’</div></a>
+                <a href="https://scryfall.com/card/iko/227/lutri-the-spellchaser" target="_blank"><div class="pointing">2</div><div>Lutri, the Spellchaser</div><div>Creature</div><div>Borin’</div></a>
+                <a href="https://scryfall.com/card/leg/65/mana-drain" target="_blank"><div class="pointing">2</div><div>Mana Drain</div><div>Instant</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/lea/259/mana-vault" target="_blank"><div class="pointing">2</div><div>Mana Vault</div><div>Artifact</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/lea/115/mind-twist" target="_blank"><div class="pointing">2</div><div>Mind Twist</div><div>Sorcery</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/eld/247/mystic-sanctuary" target="_blank"><div class="pointing">2</div><div>Mystic Sanctuary</div><div>Land</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/mir/80/mystical-tutor" target="_blank"><div class="pointing">2</div><div>Mystical Tutor</div><div>Instant</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/vis/114/natural-order" target="_blank"><div class="pointing">2</div><div>Natural Order</div><div>Sorcery</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/exo/115/oath-of-druids" target="_blank"><div class="pointing">2</div><div>Oath of Druids</div><div>Enchantment</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/eld/197/oko-thief-of-crowns" target="_blank"><div class="pointing">2</div><div>Oko, Thief of Crowns</div><div>Apewalker</div><div>Borin’</div></a>
+                <a href="https://scryfall.com/card/dis/90/protean-hulk" target="_blank"><div class="pointing">2</div><div>Protean Hulk</div><div>Creature</div><div>Comboin'</div></a>
+                <a href="https://scryfall.com/card/dst/140/skullclamp" target="_blank"><div class="pointing">2</div><div>Skullclamp</div><div>Artifact</div><div>Borin’</div></a>
+                <a href="https://scryfall.com/card/isd/78/snapcaster-mage" target="_blank"><div class="pointing">2</div><div>Snapcaster Mage</div><div>Creature</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/exo/129/survival-of-the-fittest" target="_blank"><div class="pointing">2</div><div>Survival of the Fittest</div><div>Enchantment</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/ody/164/tainted-pact" target="_blank"><div class="pointing">2</div><div>Tainted Pact</div><div>Sorcery</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/lea/84/timetwister" target="_blank"><div class="pointing">2</div><div>Timetwister</div><div>Sorcery</div><div>Drawin'</div></a>
+                <a href="https://scryfall.com/card/usg/330/tolarian-academy" target="_blank"><div class="pointing">2</div><div>Tolarian Academy</div><div>Land</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/thb/161/underworld-breach" target="_blank"><div class="pointing">2</div><div>Underworld Breach</div><div>Enchantment</div><div>Comboin'</div></a>
+                <a href="https://scryfall.com/card/tmp/330/wasteland" target="_blank"><div class="pointing">2</div><div>Wasteland</div><div>Land</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/eld/110/wishclaw-talisman" target="_blank"><div class="pointing">2</div><div>Wishclaw Talisman</div><div>Artifact</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/mh1/217/wrenn-and-six" target="_blank"><div class="pointing">2</div><div>Wrenn and Six</div><div>Apewalker</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/lea/188/channel" target="_blank"><div class="pointing">3</div><div>Channel</div><div>Sorcery</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/ktk/36/dig-through-time" target="_blank"><div class="pointing">3</div><div>Dig Through Time</div><div>Instant</div><div>Drawin'</div></a>
+                <a href="https://scryfall.com/card/ptk/78/imperial-seal" target="_blank"><div class="pointing">3</div><div>Imperial Seal</div><div>Sorcery</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/hml/33/merchant-scroll" target="_blank"><div class="pointing">3</div><div>Merchant Scroll</div><div>Sorcery</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/atq/82c/strip-mine" target="_blank"><div class="pointing">3</div><div>Strip Mine</div><div>Land</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/mir/66/flash" target="_blank"><div class="pointing">4</div><div>Flash</div><div>Instant</div><div>Comboin'</div></a>
+                <a href="https://scryfall.com/card/phpr/5/mana-crypt" target="_blank"><div class="pointing">4</div><div>Mana Crypt</div><div>Artifact</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/lea/269/sol-ring" target="_blank"><div class="pointing">4</div><div>Sol Ring</div><div>Artifact</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/ulg/45/tinker" target="_blank"><div class="pointing">4</div><div>Tinker</div><div>Sorcery</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/ktk/59/treasure-cruise" target="_blank"><div class="pointing">4</div><div>Treasure Cruise</div><div>Sorcery</div><div>Drawin'</div></a>
+                <a href="https://scryfall.com/card/vis/72/vampiric-tutor" target="_blank"><div class="pointing">4</div><div>Vampiric Tutor</div><div>Instant</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/lea/104/demonic-tutor" target="_blank"><div class="pointing">5</div><div>Demonic Tutor</div><div>Sorcery</div><div>Tutorin'</div></a>
+                <a href="https://scryfall.com/card/lea/261/mox-emerald" target="_blank"><div class="pointing">5</div><div>Mox Emerald</div><div>Artifact</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/lea/262/mox-jet" target="_blank"><div class="pointing">5</div><div>Mox Jet</div><div>Artifact</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/lea/263/mox-pearl" target="_blank"><div class="pointing">5</div><div>Mox Pearl</div><div>Artifact</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/lea/264/mox-ruby" target="_blank"><div class="pointing">5</div><div>Mox Ruby</div><div>Artifact</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/lea/265/mox-sapphire" target="_blank"><div class="pointing">5</div><div>Mox Sapphire</div><div>Artifact</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/lea/47/ancestral-recall" target="_blank"><div class="pointing">6</div><div>Ancestral Recall</div><div>Instant</div><div>Drawin'</div></a>
+                <a href="https://scryfall.com/card/lea/83/time-walk" target="_blank"><div class="pointing">6</div><div>Time Walk</div><div>Sorcery</div><div>Borin'</div></a>
+                <a href="https://scryfall.com/card/lea/232/black-lotus" target="_blank"><div class="pointing">7</div><div>Black Lotus</div><div>Artifact</div><div>Rampin'</div></a>
+                <a href="https://scryfall.com/card/lea/274/time-vault" target="_blank"><div class="pointing">7</div><div>Time Vault</div><div>Artifact</div><div>Comboin'</div></a>
+            </div>
         </div>
 
         <div id="sides-list" class="section">
@@ -211,6 +230,16 @@
             </div>
         </div>
     </div>
+
+    <div id="scryfall-tooltip">
+        <!-- Loading Icon -->
+        <div id="scryfall-tooltip-spinner" class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        
+        <img id="scryfall-tooltip-image"/>
+        <div id="scryfall-tooltip-dismiss">Dismiss</div>
+    </div>
+
+    <script src="../js/scryfall.js"></script>
 </body>
 
 </html>
