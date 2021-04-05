@@ -25,6 +25,22 @@
     <!-- <link rel="stylesheet" type="text/css" href="../css/index.css"> -->
 
     <style type="text/css">
+    :root {
+        /* Primary spectre color scheme */
+        --primary-color: #5755d9;
+        --secondary-color: #f1f1fc;
+        --success-color: #32b643;
+        --warning-color: #ffb700;
+        --error-color: #e85600;
+        --dark-color: #303742;
+        --grey-dark-color: #66758c;
+        --grey-color: #bcc3ce;
+        --grey-light-color: #f7f8f9;
+        --light-color: #fff;
+
+        --primary-text-color: #3b4351;
+    }
+
     body {
         padding: 8px;
     }
@@ -43,9 +59,28 @@
         max-height: 200px;
     }
 
-    #points {
+    #decklist, #points {
         max-width: 600px;
         margin: 0 auto;
+    }
+
+    #decklist {
+        margin-bottom: 2em;
+        min-height: 200px;
+    }
+    
+    #decklist-input {
+        min-width: 100%;
+        min-height: 6rem;
+    }
+
+    #decklist-submit {
+        width: 100%;
+    }
+
+    #decklist-output {
+        height: 100%;
+        /* overflow-y: scroll; */
     }
 
     #sides-visual {
@@ -83,7 +118,7 @@
         background: #eef0f3;
     }
 
-    #points > a:hover, #points > a:focus, #points > a:active, #points > a:visited {
+    #points > a, #points > a:hover, #points > a:focus, #points > a:active, #points > a:visited {
         color: unset;
         text-decoration: unset;
     }
@@ -123,6 +158,26 @@
                 <li><b>Borin'</b>: These cards are so efficient, so much better than 95% of their comparables that if a deck is in their respective colors, and making Dominaria shaking decisions like “I Will Play Creatures” they are automatically included. Examples of this are Ponder, Umezawa’s Jitte, Deathrite Shaman, Skill-Ape Nemesis, Snapcaster Mage, Oko Queef of Clowns, Strip Mine, Wasteland and even Sylvan Library which is also Drawin’.</li>
                 <li><b>Tutorin'</b>: These cards search for other stupid cards. In a format of only Goblin Pikers tutors would be worthless, but alas not the case. Universally Demonic Tutor is seen as the gold standard, with Vampiric, Mystical, Imperial Seal and others following down the line. Cards like Tinker, Oath of Druids, Survival of the Fittest and Entomb are effectively tutors as well.</li>
             </ul>
+
+            <div id="decklist" class="form-group">
+                <h4>Check Your Decklist</h4>
+                <div class="columns">
+                    <div class="column col-6 col-xs-12">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <textarea class="form-input" id="decklist-input"></textarea>
+                            </div>
+                            <div class="form-group btn-group btn-group-block">
+                                <button id="decklist-submit" class="btn btn-primary">Check</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="output" class="column col-6 col-xs-12">
+                        <div id="decklist-output"><i>Note that this only looks for pointed card names and will not catch typos.</i></div>
+                        <div id="decklist-errors"></div>
+                    </div>
+                </div>
+            </div>
 
             <div id="points" class="table table-striped table-hover">
                 <a class="header"><div>Points</div><div>Name</div><div>Type</div><div>Justification</div></a>
@@ -250,6 +305,7 @@
     </div>
 
     <script src="../js/scryfall.js"></script>
+    <script src="../js/lch-points.js"></script>
 </body>
 
 </html>
