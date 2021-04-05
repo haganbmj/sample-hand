@@ -78,7 +78,7 @@
 
             if (cardLookup) {
                 const d = document.createElement('div');
-                d.innerHTML = `<div><b class="bg-dark text-light s-rounded centered px-1">${cardLookup}</b> ${inputCardName}</div>`;
+                d.innerHTML = `<div class="bg-gray text-dark s-rounded centered px-1"><b class="bg-dark text-light s-rounded centered px-1">${cardLookup}</b> ${inputCardName}</div>`;
                 decklistOutput.appendChild(d);
                 totalPoints += cardLookup;
             }
