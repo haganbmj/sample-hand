@@ -1,38 +1,462 @@
-html.light {
-    /* Primary spectre color scheme */
-    --primary-color: #5755d9;
-    --secondary-color: #f1f1fc;
-    --success-color: #32b643;
-    --warning-color: #ffb700;
-    --error-color: #e85600;
-    --dark-color: #303742;
-    --grey-dark-color: #66758c;
-    --grey-color: #bcc3ce;
-    --grey-light-color: #f7f8f9;
-    --light-color: #fff;
+/* Geocities-era styling for griselbrand.com index */
 
-    --primary-text-color: #3b4351;
-}
-
-.navbar {
-    padding: .4rem;
-}
-
-.navbar-icon {
-    height: 36px;
-    width: auto;
-}
-
-#content {
-    padding: .4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#hand > .column {
+/* === Starfield Background === */
+html, body {
+    margin: 0;
     padding: 0;
+    min-height: 100vh;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
 }
 
-img.card-image {
+/* Intentionally setting a white background so that on scroll it appears as a mistake */
+html {
+    background-color: white;
+}
+
+body {
+    background-color: #000020;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Ccircle cx='12' cy='18' r='1' fill='white'/%3E%3Ccircle cx='85' cy='42' r='0.8' fill='%23ccc'/%3E%3Ccircle cx='143' cy='9' r='1' fill='white'/%3E%3Ccircle cx='170' cy='65' r='0.8' fill='%23ccc'/%3E%3Ccircle cx='58' cy='112' r='1' fill='white'/%3E%3Ccircle cx='189' cy='98' r='1' fill='white'/%3E%3Ccircle cx='132' cy='135' r='0.8' fill='%23ccc'/%3E%3Ccircle cx='35' cy='155' r='1' fill='white'/%3E%3Ccircle cx='122' cy='167' r='0.8' fill='%23ccc'/%3E%3Ccircle cx='175' cy='148' r='1' fill='white'/%3E%3Ccircle cx='68' cy='185' r='1' fill='white'/%3E%3Ccircle cx='155' cy='192' r='0.8' fill='%23ccc'/%3E%3Ccircle cx='25' cy='72' r='1' fill='white'/%3E%3Ccircle cx='105' cy='52' r='1' fill='white'/%3E%3Ccircle cx='48' cy='28' r='0.8' fill='%23ccc'/%3E%3Ccircle cx='192' cy='32' r='1' fill='white'/%3E%3Ccircle cx='78' cy='82' r='1' fill='white'/%3E%3Ccircle cx='165' cy='178' r='1' fill='white'/%3E%3Ccircle cx='8' cy='142' r='0.8' fill='%23ccc'/%3E%3Ccircle cx='98' cy='122' r='1' fill='white'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+/* === Page Container === */
+.container {
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+/* === Typography === */
+h1, h2 {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+h1 {
+    color: #ffff00;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header h2 {
+    color: #ffff00;
+}
+
+h2.tools { color: #00ffff; }
+h2.formats { color: #00ff00; }
+h2.misc { color: #ff00ff; }
+
+/* === Marquee === */
+marquee {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 1.5em;
+    color: #ff00ff;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.flame {
+    display: inline-block;
+    animation: flicker 0.15s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scaleY(1) scaleX(1) rotate(-3deg);
+        filter: brightness(1);
+    }
+    25% {
+        transform: scaleY(1.15) scaleX(0.95) rotate(2deg);
+        filter: brightness(1.2);
+    }
+    50% {
+        transform: scaleY(0.9) scaleX(1.05) rotate(-1deg);
+        filter: brightness(0.9);
+    }
+    75% {
+        transform: scaleY(1.1) scaleX(0.98) rotate(3deg);
+        filter: brightness(1.1);
+    }
+    100% {
+        transform: scaleY(1.05) scaleX(1.02) rotate(-2deg);
+        filter: brightness(1.15);
+    }
+}
+
+/* === Neon Dividers === */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #ff00ff, #00ffff, #ffff00, #00ff00, #ff00ff);
+    margin: 1rem 0;
+}
+
+/* === Header === */
+.header {
+    text-align: center;
+}
+
+.header img {
+    width: auto;
+    max-width: min(300px, 100%);
     border-radius: 4.75% / 3.5%;
+}
+
+/* === Firewall Divider === */
+.firewall {
+    text-align: center;
+}
+
+.firewall img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* === Link Directory === */
+.links {
+    text-align: center;
+}
+
+.links table {
+    margin: 0.5rem auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px outset #666666;
+    width: 100%;
+    max-width: 650px;
+    table-layout: fixed;
+}
+
+.links td {
+    border: 2px inset #666666;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    color: #ffff00;
+}
+
+.links td:first-child {
+    white-space: nowrap;
+}
+
+.links td.desc {
+    text-align: left;
+    color: #cccccc;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.95em;
+}
+
+.links a {
+    color: #00ffff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.links a:hover {
+    color: #ff00ff;
+}
+
+.links a:visited {
+    color: #cc88ff;
+}
+
+/* Mobile: stack table cells vertically */
+@media (max-width: 500px) {
+    .links td:first-child {
+        white-space: normal;
+    }
+
+    .links table,
+    .links tr,
+    .links td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .links td {
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .links td.desc {
+        text-align: center;
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .webring-box {
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+
+    .webring-nav {
+        word-break: break-word;
+    }
+}
+
+/* === Under Construction Banner === */
+.under-construction {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    padding: 0.8rem;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 1.2em;
+    color: #000000;
+    font-weight: bold;
+    background: repeating-linear-gradient(
+        -45deg,
+        #ffff00,
+        #ffff00 10px,
+        #000000 10px,
+        #000000 20px
+    );
+    background-size: 28px 28px;
+    animation: barberpole 1s linear infinite;
+}
+
+@keyframes barberpole {
+    0% { background-position: 0 0; }
+    100% { background-position: 28px 0; }
+}
+
+.under-construction span {
+    background: #ffff00;
+    padding: 0.2rem 0.8rem;
+}
+
+/* === Visitor Counter === */
+.visitor-counter {
+    text-align: center;
+    margin: 1rem 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    color: #00ff00;
+}
+
+.visitor-counter .counter-box {
+    display: inline-block;
+    border: 2px inset #888888;
+    background: #000000;
+    padding: 0.4rem 1rem;
+}
+
+/* === Webmaster Line === */
+.webmaster {
+    text-align: center;
+    font-size: 0.9em;
+    margin: 1rem 0;
+    color: #999999;
+}
+
+.webmaster a {
+    color: #00ffff;
+    text-decoration: underline;
+}
+
+.webmaster a:hover {
+    color: #ff00ff;
+}
+
+/* === Best Viewed In === */
+.best-viewed {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.mage {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* === Webring === */
+.webring {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.webring-box {
+    display: inline-block;
+    border: 2px outset #666666;
+    padding: 1rem 1.5rem;
+    max-width: 400px;
+    width: 100%;
+}
+
+.webring-title {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffff00;
+    margin-bottom: 0.5rem;
+}
+
+.webring-text {
+    font-size: 0.9em;
+    color: #cccccc;
+    margin: 0.3rem 0;
+}
+
+.webring-nav {
+    margin: 0.5rem 0;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 0.95em;
+}
+
+.webring-nav a {
+    color: #00ffff;
+    text-decoration: underline;
+}
+
+.webring-nav a:hover {
+    color: #ff00ff;
+}
+
+.webring-text a {
+    color: #00ffff;
+    text-decoration: underline;
+}
+
+.webring-text a:hover {
+    color: #ff00ff;
+}
+
+/* === Pointless Award === */
+.pointless {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.pointless table {
+    margin: 0 auto;
+    border: 2px outset #666666;
+    background: #ffffff;
+}
+
+.pointless td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pointless img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pointless h3 {
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.pointless a {
+    color: revert;
+}
+
+.pointless a:hover {
+    color: revert;
+}
+
+/* === Burn Book === */
+.burn-book {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 320px;
+    background: #ffb6c1;
+    border: 3px solid #ff69b4;
+    border-radius: 4px;
+    padding: 1.5rem;
+    transform: rotate(-1deg);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.burn-book h2 {
+    font-family: 'Bradley Hand', 'Segoe Script', 'Comic Sans MS', cursive;
+    color: #cc0066;
+    font-size: 2em;
+    margin: 0 0 0.8rem;
+    text-decoration: underline;
+}
+
+.burn-book-entry img {
+    max-width: 180px;
+    width: 100%;
+    border: 3px solid #fff;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: rotate(2deg);
+    margin-bottom: 0.8rem;
+}
+
+.burn-book-entry p {
+    font-family: 'Bradley Hand', 'Segoe Script', 'Comic Sans MS', cursive;
+    color: #660033;
+    font-size: 1.1em;
+    font-style: italic;
+    margin: 0;
+}
+
+/* === Wednesday Pink Mode === */
+.wednesday {
+    --accent-cyan: #ff69b4;
+    --accent-yellow: #ffb6c1;
+    --accent-green: #ff1493;
+    --accent-magenta: #ff69b4;
+}
+
+.wednesday h1 {
+    color: #ffb6c1;
+}
+
+.wednesday .header h2 {
+    color: #ffb6c1;
+}
+
+.wednesday h2.tools,
+.wednesday h2.formats,
+.wednesday h2.misc {
+    color: #ff69b4;
+}
+
+.wednesday marquee {
+    color: #ff1493;
+}
+
+.wednesday .links td {
+    color: #ffb6c1;
+}
+
+.wednesday .links a {
+    color: #ff69b4;
+}
+
+.wednesday .links a:hover {
+    color: #ff1493;
+}
+
+.wednesday hr {
+    background: linear-gradient(to right, #ff69b4, #ffb6c1, #ff1493, #ff69b4);
+}
+
+.wednesday .webring-title,
+.wednesday .pointless h3,
+.wednesday .visitor-counter .counter-box {
+    color: #ff69b4;
+}
+
+.wednesday .webring-nav a,
+.wednesday .webmaster a,
+.wednesday .pointless a,
+.wednesday .webring-text a {
+    color: #ff69b4;
 }
