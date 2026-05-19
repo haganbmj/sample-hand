@@ -105,3 +105,6 @@ dist
 
 .vscode/
 .DS_Store
+
+# Scryfall bulk data
+docs/finder/default-cards.json

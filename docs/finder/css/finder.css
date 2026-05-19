@@ -1,0 +1,194 @@
+/* Theme variables (required by spectre.css) */
+html {
+  --primary-color: #5755d9;
+  --secondary-color: #f1f1fc;
+  --success-color: #32b643;
+  --warning-color: #ffb700;
+  --error-color: #e85600;
+  --dark-color: #303742;
+  --grey-dark-color: #66758c;
+  --grey-color: #bcc3ce;
+  --grey-light-color: #f7f8f9;
+  --light-color: #fff;
+  --primary-text-color: #3b4351;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0 0.8rem;
+}
+
+.navbar-icon {
+  height: 36px;
+  width: auto;
+}
+
+/* Color icons */
+.color-gold.ms-cost {
+  background-color: #c9a933 !important;
+}
+
+/* Controls bar */
+.controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  flex-wrap: wrap;
+}
+
+.controls-bar .form-select.select-sm {
+  width: auto;
+  min-width: 140px;
+}
+
+.empty-placeholder {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Collapsible sections */
+.result-section {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+.result-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  user-select: none;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.result-section-header:hover {
+  background: #eef0f2;
+}
+
+.result-section-header .chevron {
+  transition: transform 0.15s ease;
+  margin-right: 0.4rem;
+}
+
+.result-section.expanded .chevron {
+  transform: rotate(90deg);
+}
+
+.result-section-body {
+  display: none;
+  padding: 0.4rem 0.6rem;
+}
+
+.result-section.expanded .result-section-body {
+  display: block;
+}
+
+/* Result tables */
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.result-table th,
+.result-table td {
+  padding: 0.2rem 0.4rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* By Card view columns: Set Name | Code | Price */
+.result-table .col-set-name {
+  width: 60%;
+}
+
+.result-table .col-set-code {
+  width: 20%;
+}
+
+.result-table .col-price {
+  width: 20%;
+}
+
+/* By Set view columns: Card Name | Qty | Price */
+.result-table .col-card-name {
+  width: 60%;
+}
+
+.result-table .col-qty {
+  width: 20%;
+}
+
+/* .col-price reused from above */
+
+.result-table th {
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.result-table td.price {
+  font-family: monospace;
+  text-align: right;
+}
+
+.result-table th.price {
+  text-align: right;
+}
+
+/* Badge for counts */
+.badge-count {
+  background: #e0e0e0;
+  border-radius: 10px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+
+/* Warnings */
+#warnings {
+  margin-bottom: 0.6rem;
+}
+
+#warnings .btn-clear {
+  float: right;
+}
+
+/* Tab overrides */
+.tab {
+  margin-bottom: 0;
+}
+
+/* Loading state */
+#submit-btn.loading::after {
+  content: "";
+}
+
+/* Quantity display */
+.qty {
+  color: #888;
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+}
+
+/* Max price input */
+.controls-bar .input-group-sm {
+  width: auto;
+}
+
+.controls-bar .input-group-sm .form-input {
+  width: 80px;
+}
+
+/* Page bottom spacing */
+#content {
+  padding-bottom: 3rem;
+}

@@ -1,0 +1,91 @@
+<html lang="en-US" class="light">
+
+<head>
+  <title>Set Finder - Magic the Gathering</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <meta charset="utf-8">
+  <meta name="author" content="haganbmj">
+  <meta name="description" content="Set Finder - Find which sets contain your Magic cards">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../css/spectre.css">
+  <link rel="stylesheet" type="text/css" href="./css/finder.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/mana-font@latest/css/mana.css">
+</head>
+
+<body>
+  <header class="navbar bg-gray">
+    <section class="navbar-section">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">griselbrand.com</a></li>
+        <li class="breadcrumb-item"><a href="/finder/">Set Finder</a></li>
+      </ul>
+    </section>
+    <section class="navbar-section hide-sm">
+      <a href="https://github.com/haganbmj/sample-hand" target="_blank" class="btn btn-primary ml-1">GitHub</a>
+    </section>
+  </header>
+
+  <div id="content" class="container">
+    <div class="columns">
+      <div class="column col-4 col-sm-12">
+        <div class="form-group">
+          <label class="form-label" for="card-input">Card Names</label>
+          <textarea id="card-input" class="form-input" rows="16" autofocus
+            placeholder="4 Lightning Bolt&#10;2x Abrade&#10;Séance&#10;Fire // Ice"></textarea>
+        </div>
+        <button id="submit-btn" class="btn btn-primary btn-block" onclick="handleSubmit()">Submit</button>
+      </div>
+
+      <div class="column col-8 col-sm-12">
+        <div id="controls" class="hide">
+          <ul class="tab">
+            <li class="tab-item active" id="tab-by-card">
+              <a href="#" onclick="switchView('card'); return false;">By Card</a>
+            </li>
+            <li class="tab-item" id="tab-by-set">
+              <a href="#" onclick="switchView('set'); return false;">By Set</a>
+            </li>
+          </ul>
+          <div class="controls-bar">
+            <select id="card-sort-select" class="form-select select-sm" onchange="handleSortChange()">
+              <option value="unsorted">Unsorted</option>
+              <option value="alpha">Alphabetical</option>
+            </select>
+            <select id="set-sort-select" class="form-select select-sm" style="display:none"
+              onchange="handleSortChange()">
+              <option value="matches">Most Matches</option>
+              <option value="alpha">Alphabetical</option>
+              <option value="date">Newest First</option>
+            </select>
+            <button class="btn btn-sm active" id="btn-promos" onclick="handlePromoToggle()">Show Promos</button>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon addon-sm">Max Price</span>
+              <input type="number" id="max-price" class="form-input input-sm" placeholder="∞" min="0" step="0.01"
+                onchange="handleMaxPriceChange()">
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-sm active" id="btn-usd" onclick="setCurrency('usd')">USD</button>
+              <button class="btn btn-sm" id="btn-eur" onclick="setCurrency('eur')">EUR</button>
+            </div>
+            <button class="btn btn-sm" id="btn-expand" onclick="toggleExpandAll()">Expand All</button>
+          </div>
+        </div>
+
+        <div id="warnings" class="toast toast-warning" style="display: none;"></div>
+        <div id="results">
+          <p class="empty-placeholder text-gray">Enter card names and click Submit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src="./js/finder.js"></script>
+
+</html>
